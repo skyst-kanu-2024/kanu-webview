@@ -5,7 +5,7 @@ export function RootStack() {
   const { lastMessage } = useWebviewMessage();
 
   useEffect(() => {
-    postMessage(`hello ${lastMessage}`);
+    lastMessage && postMessage(`hello ${lastMessage}`);
   }, [lastMessage]);
 
   return (

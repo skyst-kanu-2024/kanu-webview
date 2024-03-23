@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 declare global {
   interface Window {
     postWebviewMessage: (message: string) => void;
-    webkit: any;
+    webkit?: any;
   }
 }
 
 export function postMessage(message: string) {
-  window.webkit.messageHandlers.HandlerName.postMessage(message);
+  window.webkit?.messageHandlers.HandlerName.postMessage(message);
 }
 
 window.postWebviewMessage = (message: string) => {
