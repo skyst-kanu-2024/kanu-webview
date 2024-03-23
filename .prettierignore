@@ -1,0 +1,3 @@
+.github
+shared/rn-codemod/src/**/fixture/*.js
+shared/rn-codemod/src/**/fixture/*.ts
